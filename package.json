@@ -1,0 +1,14 @@
+{
+  "name": "algorithmic_tasks",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "mocha test.js"
+  },
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "mocha": "^7.0.1",
+    "sinon": "^8.1.1"
+  }
+}

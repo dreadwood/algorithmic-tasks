@@ -1,6 +1,4 @@
-
-// You should implement your task here.
-
+// solution 1
 module.exports = function towelSort (matrix) {
   var arrayMatrix = [];
 
@@ -20,3 +18,14 @@ module.exports = function towelSort (matrix) {
 
   return arrayMatrix;
 };
+
+// solution 2
+// module.exports = function towelSort (matrix) {
+//   if (!matrix || matrix.length === 0) {
+//     return [];
+//   }
+
+//   return matrix.reduce((acc, item, i) => 
+//     (i % 2 !== 0) ? [...acc, ...item.reverse()] : [...acc, ...item], 
+//     []);
+// }

@@ -38,6 +38,7 @@ const MORSE_TABLE = {
     '**********': ' '
 };
 
+// solution 1
 const MORSE_BINARY = {
   '00': '',
   '10': '.',
@@ -72,10 +73,31 @@ function decode(expr) {
     message += MORSE_TABLE[item];
   })
 
-  // console.log(arrBinaryWords);
-  // console.log(arrMorseWords);
   return message;
 }
+
+// solution 2
+// const DECODER_TABLE = {
+//   '**********': ' ',
+//   '10': '.',
+//   '11': '-',
+//   '00': '',
+// };
+
+// function decode(expr) {
+//   const arrayCodedLetters = expr.match(/.{1,10}/g);
+
+//   return arrayCodedLetters.map((letter) => {
+//     if (letter in DECODER_TABLE) {
+//       return DECODER_TABLE[letter];
+//     }
+
+//     const arrayCodingKey = letter.match(/.{1,2}/g);
+//     const morseLetter = arrayCodingKey.reduce((acc, item) => acc += DECODER_TABLE[item], '');
+
+//     return MORSE_TABLE[morseLetter];
+//   }).join('')
+// };
 
 module.exports = {
     decode

@@ -1,3 +1,4 @@
+// solution 1
 module.exports = function reverse(n) {
   var strOfNum = String(Math.abs(n));
   var reverseStr = '';
@@ -7,3 +8,9 @@ module.exports = function reverse(n) {
 
   return Number(reverseStr);
 }
+
+// solution 2
+// module.exports = function reverse (n) {
+//   const modulus = Math.abs(n);
+//   return Number(Array.from(String(modulus)).reverse().join(''));
+// }
